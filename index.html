@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7fa" />
+    <title>Pitchbook — Lesson Scheduler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" data-action="navigate" data-page="dashboard" aria-label="Pitchbook home">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span class="brand-name">pitch<span>book</span></span>
+        </a>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-item" data-action="navigate" data-page="dashboard"><span class="nav-icon">◫</span>Overview</button>
+          <button class="nav-item" data-action="navigate" data-page="schedule"><span class="nav-icon">▦</span>Schedule</button>
+          <button class="nav-item" data-action="navigate" data-page="athletes"><span class="nav-icon">♧</span>Athletes<span class="nav-count" id="athlete-count">0</span></button>
+          <button class="nav-item" data-action="navigate" data-page="payments"><span class="nav-icon">＄</span>Payments</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="storage-card">
+            <span class="storage-dot"></span>
+            <div><strong>Private workspace</strong><small>Saved in this browser</small></div>
+          </div>
+          <button class="nav-item utility-item" data-action="export"><span class="nav-icon">⇩</span>Export backup</button>
+          <button class="nav-item utility-item" data-action="import"><span class="nav-icon">⇧</span>Import backup</button>
+          <input id="import-file" type="file" accept="application/json,.json" hidden />
+          <div class="coach-profile"><div class="coach-avatar">C</div><div><strong>Coach workspace</strong><small>Pitching lessons</small></div><span class="profile-dots">•••</span></div>
+        </div>
+      </aside>
+      <main class="main-area">
+        <header class="topbar">
+          <div class="mobile-brand"><span class="brand-mark"><span></span><span></span><span></span></span><span class="brand-name">pitch<span>book</span></span></div>
+          <div class="page-heading"><p class="eyebrow" id="page-eyebrow">YOUR TRAINING DESK</p><h1 id="page-title">Overview</h1></div>
+          <div class="top-actions" id="top-actions"></div>
+        </header>
+        <div class="page-content" id="page-content"></div>
+      </main>
+    </div>
+    <div id="modal-root"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
