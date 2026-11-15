@@ -17,6 +17,31 @@
     } catch (error) { console.warn('Could not read saved Pitchbook data.', error); }
     return { athletes: [], lessons: [], packages: [] };
   }
+  function mergeRecords(shared, local) {
+    const merge = (sharedRows, localRows) => {
+      const rows = new Map(sharedRows.map(item => [item.id, item]));
+      localRows.forEach(item => rows.set(item.id, item));
+      return [...rows.values()];
+    };
+    return {
+      athletes: merge(shared.athletes, local.athletes),
+      lessons: merge(shared.lessons, local.lessons),
+      packages: merge(shared.packages, local.packages)
+    };
+  }
+  async function loadPublicRecords() {
+    try {
+      const response = await fetch(new URL('public-records.json', document.baseURI), { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const shared = await response.json();
+      if (![shared.athletes, shared.lessons, shared.packages].every(Array.isArray)) throw new Error('Invalid shared records');
+      state = mergeRecords(shared, state);
+      persist();
+      render();
+    } catch (error) {
+      console.info('Shared Pitchbook records are unavailable in this browser.', error);
+    }
+  }
   function persist(message) {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -337,4 +362,5 @@
   });
   $('#import-file').addEventListener('change', event => { importBackup(event.target.files?.[0]); event.target.value = ''; });
   render();
+  loadPublicRecords();
 })();
