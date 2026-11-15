@@ -18,4 +18,6 @@ From this folder, run `python3 -m http.server 8000`, then open `http://localhost
 
 ## Data and athlete portals
 
-Records are stored in this browser’s local storage. Export a backup regularly if you want an extra copy. The athlete portal is currently a preview using the same browser data; sharing it with families from another device requires hosted storage and secure sign-in, which this local version does not provide.
+On GitHub Pages, the app loads its starting records from `public-records.json`. The GitHub repository and Pages site are public, so anyone can view the published athlete profiles, lesson schedule and history, and payment status. The current import contains 4 athlete records, 6 lessons, and 2 packages.
+
+Changes made in the app are saved to the current browser’s local storage. They do not sync to other browsers or update the public records file. Use Export backup to save a copy of browser changes; publishing new shared records requires updating `public-records.json` in the repository. The athlete portal is a view of the same records and does not have sign-in or access controls.
