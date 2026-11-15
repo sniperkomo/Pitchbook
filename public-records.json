@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "exportedAt": "2026-11-15T02:02:26.380Z",
+  "athletes": [
+    {
+      "id": "eca7a5f3-4fec-465b-9788-68b047f904dc",
+      "name": "Will Stillwell",
+      "age": "11",
+      "throwHand": "Left",
+      "email": "",
+      "phone": "",
+      "goals": "",
+      "archived": false,
+      "createdAt": "2026-11-14T23:45:49.689Z"
+    },
+    {
+      "id": "0b6b5864-1c69-4508-a320-078e5b34b1fe",
+      "name": "Max Avery",
+      "age": "10",
+      "throwHand": "Right",
+      "email": "",
+      "phone": "",
+      "goals": "",
+      "archived": false,
+      "createdAt": "2026-11-14T23:46:03.733Z"
+    },
+    {
+      "id": "c8c6dda0-d765-41b7-9155-360a50a3a1e1",
+      "name": "Ericsson Allred",
+      "age": "10",
+      "throwHand": "Right",
+      "email": "",
+      "phone": "",
+      "goals": "",
+      "archived": false,
+      "createdAt": "2026-11-14T23:46:28.339Z"
+    },
+    {
+      "id": "b6852fbd-f6f9-476b-931f-1adfde79f536",
+      "name": "Holden",
+      "age": "9",
+      "throwHand": "Right",
+      "email": "",
+      "phone": "",
+      "goals": "",
+      "archived": false,
+      "createdAt": "2026-11-14T23:46:37.269Z"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "773bcd8d-7b28-48ba-b938-26953f63afcb",
+      "athleteId": "c8c6dda0-d765-41b7-9155-360a50a3a1e1",
+      "start": "2026-11-05T21:30:00.000Z",
+      "duration": 30,
+      "billing": "package",
+      "packageId": "0210dcaa-7ee6-42da-9a72-c9e89d89498b",
+      "notes": "",
+      "status": "completed",
+      "paid": false,
+      "createdAt": "2026-11-14T23:50:05.259Z"
+    },
+    {
+      "id": "0875f9db-5756-4574-8c04-91faec1954fd",
+      "athleteId": "c8c6dda0-d765-41b7-9155-360a50a3a1e1",
+      "start": "2026-11-12T21:30:00.000Z",
+      "duration": 30,
+      "billing": "package",
+      "packageId": "0210dcaa-7ee6-42da-9a72-c9e89d89498b",
+      "notes": "",
+      "status": "completed",
+      "paid": false,
+      "createdAt": "2026-11-14T23:50:34.211Z"
+    },
+    {
+      "id": "c5bcb068-fd9c-487e-ac77-3627cafef970",
+      "athleteId": "0b6b5864-1c69-4508-a320-078e5b34b1fe",
+      "start": "2026-11-18T21:00:00.000Z",
+      "duration": 30,
+      "billing": "package",
+      "packageId": "7714cadd-f9de-4534-b0a4-660d1b70e7e7",
+      "notes": "",
+      "status": "scheduled",
+      "paid": false,
+      "createdAt": "2026-11-15T01:27:09.859Z"
+    },
+    {
+      "id": "83de3e8d-ac27-435e-b19b-4c4abd978ad7",
+      "athleteId": "c8c6dda0-d765-41b7-9155-360a50a3a1e1",
+      "start": "2026-11-19T21:30:00.000Z",
+      "duration": 30,
+      "billing": "package",
+      "packageId": "0210dcaa-7ee6-42da-9a72-c9e89d89498b",
+      "notes": "",
+      "status": "scheduled",
+      "paid": false,
+      "createdAt": "2026-11-15T01:27:30.596Z"
+    },
+    {
+      "id": "c8e17871-be5e-49ea-9135-3af1bf268074",
+      "athleteId": "b6852fbd-f6f9-476b-931f-1adfde79f536",
+      "start": "2026-11-19T21:00:00.000Z",
+      "duration": 30,
+      "billing": "single",
+      "packageId": "",
+      "notes": "",
+      "status": "scheduled",
+      "paid": false,
+      "createdAt": "2026-11-15T01:27:42.749Z"
+    },
+    {
+      "id": "e294e817-b8cf-4505-873a-765ec053a8b7",
+      "athleteId": "eca7a5f3-4fec-465b-9788-68b047f904dc",
+      "start": "2026-11-20T20:00:00.000Z",
+      "duration": 30,
+      "billing": "single",
+      "packageId": "",
+      "notes": "",
+      "status": "scheduled",
+      "paid": false,
+      "createdAt": "2026-11-15T02:02:03.836Z"
+    }
+  ],
+  "packages": [
+    {
+      "id": "7714cadd-f9de-4534-b0a4-660d1b70e7e7",
+      "athleteId": "0b6b5864-1c69-4508-a320-078e5b34b1fe",
+      "lessonCount": 8,
+      "price": 400,
+      "paid": true,
+      "purchasedAt": "2026-11-14T17:00:00.000Z",
+      "createdAt": "2026-11-14T23:47:34.815Z"
+    },
+    {
+      "id": "0210dcaa-7ee6-42da-9a72-c9e89d89498b",
+      "athleteId": "c8c6dda0-d765-41b7-9155-360a50a3a1e1",
+      "lessonCount": 4,
+      "price": 200,
+      "paid": true,
+      "purchasedAt": "2026-11-05T17:00:00.000Z",
+      "createdAt": "2026-11-14T23:48:38.355Z"
+    }
+  ]
+}
